@@ -3,7 +3,7 @@ name: build-api
 on:
   push:
     branches:
-    - "prod"
+    - "main"
     paths:
     - "api/*"
   workflow_dispatch:

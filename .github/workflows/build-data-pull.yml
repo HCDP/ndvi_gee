@@ -3,7 +3,7 @@ name: build-data-pull
 on:
   push:
     branches:
-    - "prod"
+    - "main"
     paths:
     - "data_pull/*"
   workflow_dispatch:
