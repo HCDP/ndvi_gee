@@ -138,4 +138,4 @@ def find_nearest_folder(date_str):
   return nearest_folder
 
 if __name__ == "__main__":
-  app.run(debug=True)
+  app.run(debug = True)
