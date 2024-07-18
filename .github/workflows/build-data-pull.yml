@@ -6,6 +6,7 @@ on:
     - "main"
     paths:
     - "data_pull/*"
+    - "**/build-data-pull.yml"
   workflow_dispatch:
 jobs:
   build:
