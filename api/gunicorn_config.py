@@ -1,5 +1,7 @@
 import os
 
+certfile = int(os.environ.get('GUNICORN_CERTFILE', None))
+keyfile = int(os.environ.get('GUNICORN_KEYFILE', None))
 workers = int(os.environ.get('GUNICORN_PROCESSES', '2'))
 threads = int(os.environ.get('GUNICORN_THREADS', '4'))
 # timeout = int(os.environ.get('GUNICORN_TIMEOUT', '120'))

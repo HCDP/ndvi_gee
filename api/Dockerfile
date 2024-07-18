@@ -2,6 +2,7 @@ FROM python:3.10
 
 RUN mkdir /data
 RUN mkdir /app
+RUN mkdir /certs
 
 COPY . /app
 WORKDIR /app
