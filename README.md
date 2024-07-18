@@ -58,7 +58,7 @@ Accessing http://127.0.0.1:5000/download/latest will allow you to download the l
 Accessing http://127.0.0.1:5000/download/spc_date/<date> will allow you to download the NDVI folder nearest to the specified date (format: YYYY-MM-DD) as a ZIP file.
 Directory Structure
 •	Exported Images
-NDVI images are exported to folders named with the end date in the format YYYY-MM-DD under the NDVI final directory. Each region of interest will have its own subdirectory within this folder.
+NDVI images are exported to folders named with the end date in the format YYYY-MM-DD. Each region of interest will have its own subdirectory within this folder.
 Additional Information
 Error Handling
 Both scripts have basic error handling to ensure the process completes even if some steps fail. Adjust the try-except blocks as necessary for more robust error reporting.

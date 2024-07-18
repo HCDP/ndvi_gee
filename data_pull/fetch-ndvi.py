@@ -96,7 +96,7 @@ for extent in extents:
         NDVIsen = filled.median().clip(extent['geometry'])
         # Create a folder based on the extent's name
         folder_name = extent['name']
-        out_dir = os.path.expanduser(f'/data/{end_date_str}/NDVI final/{folder_name}')
+        out_dir = os.path.expanduser(f'/data/{end_date_str}/{folder_name}')
         
         # Ensure the folder exists or create it if not
         os.makedirs(out_dir, exist_ok=True)
