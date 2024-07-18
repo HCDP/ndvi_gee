@@ -12,10 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: set workdir
-      run: cd api
-    - name: add config
-      run: echo "${{ secrets.GEE_CREDENTIALS }}" | base64 -d >> credentials.json
     - name: Set container name
       run: echo "CONTAINER_NAME=ndvi-api" >> $GITHUB_ENV
     - name: Get date and hash
@@ -27,6 +23,7 @@ jobs:
         username: ${{ secrets.PUSH_PACKAGE_USERNAME }}
         password: ${{ secrets.PUSH_PACKAGE_TOKEN }}
     - name: Build container
+      working-directory: api
       run: docker build . --tag ghcr.io/hcdp/${{ env.CONTAINER_NAME }}:${{ env.TAG }}
     - name: Tag the container as latest
       run: docker tag ghcr.io/hcdp/${{ env.CONTAINER_NAME }}:${{ env.TAG }} ghcr.io/hcdp/${{ env.CONTAINER_NAME }}:latest
