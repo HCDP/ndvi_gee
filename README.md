@@ -27,18 +27,13 @@ Both scripts require authentication with Google Earth Engine. This involves usin
 Setup Instructions
 
 1.	Install Python Packages
-Create a requirements.txt file with the following content and install the required packages:
-•	geemap
-•	earthengine-api
-•	seleniumbase
-•	Flask
 
 Then, install the packages using:
 •	pip install -r requirements.txt
 
 2.	Google Earth Engine Authentication
-The ndvi.py script uses Selenium to handle Google authentication. Make sure you adjust the script to match your login credentials and follow the necessary steps to authenticate:
-•	Replace your_gmail@gmail.com and password with your email and password.
+•	Create a google cloud service account and export a key file as JSON.
+•	Name this file credentials.json and copy to the api folder.
 Running the Scripts
 
 1.	Running the NDVI Processing Script
